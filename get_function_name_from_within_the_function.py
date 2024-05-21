@@ -1,3 +1,7 @@
+# sources:
+# (1) https://stackoverflow.com/questions/5067604/determine-function-name-from-within-that-function
+# (2) https://stackoverflow.com/questions/4492559/how-to-get-current-function-into-a-variable
+
 import inspect
 from inspect import stack
 
