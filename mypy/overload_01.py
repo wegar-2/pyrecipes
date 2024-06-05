@@ -4,17 +4,21 @@ import math
 
 @overload
 def norm(x: float, y: float) -> float:
-    return math.sqrt(math.pow(x, 2) + math.pow(y, 2))
+    pass
 
 
 @overload
 def norm(x: float, y: float, z: float) -> float:
-    return math.sqrt(math.pow(x, 2) + math.pow(y, 2) + math.pow(z, 2))
+    pass
 
 
 def norm(x: float, y: float, z: Optional[float] = None):
     if z is None:
-        return norm(x=x, y=y)
+        return math.sqrt(math.pow(x, 2) + math.pow(y, 2))
     else:
-        return norm(x=x, y=y, z=z)
-    
+        return math.sqrt(math.pow(x, 2) + math.pow(y, 2) + math.pow(z, 2))
+
+
+if __name__ == "__main__":
+    print(f"{norm(x=12, y=3)=}")
+    print(f"{norm(x=12, y=3, z=22)=}")
