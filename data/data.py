@@ -11,10 +11,16 @@ def load_data() -> DataDict:
     paths: list[Path] = list(p.glob(pattern="*.csv"))
     datas: DataDict = {}
     for path in paths:
-        datas[path.name.split(".")[0][:-2]] = pd.read_csv(
-            path,
-            parse_dates=["Date"]
-        )
+        name: str = path.name.split(".")[0][:-2]
+        data: pd.DataFrame = pd.read_csv(path, parse_dates=["Date"])
+        data = data.set_index("Date")
+        data.columns = [
+            f"{name}_{c}".lower()
+            for c in data.columns
+        ]
+        data = data.loc[:, [c for c in data.columns
+                            if not c.endswith("volume")]]
+        datas[name] = data
     return datas
 
 
