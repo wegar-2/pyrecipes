@@ -10,7 +10,7 @@ def joiner(l, r) -> pd.DataFrame:
     return pd.merge(l, r, left_index=True, right_index=True, how="outer")
 
 
-def make_data() -> pd.DataFrame:
+def make_mi_data() -> pd.DataFrame:
     data: pd.DataFrame
     d: DataDict = load_data()
     return reduce(
@@ -20,6 +20,6 @@ def make_data() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    data = make_data()
+    data = make_mi_data()
 
     print(f"{data=}")
