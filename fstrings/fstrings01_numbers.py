@@ -22,3 +22,7 @@ if __name__ == "__main__":
     #    decimal separator
     x = 12345.678
     print(f"x = {x:0,.4f}")
+    # NOTE!: another thousands separator that can be used is underscore
+    print(f"x = {x:_}")
+    # REMARK: there are only two thousands separators that can be used with
+    # f-strings: underscore and comma
