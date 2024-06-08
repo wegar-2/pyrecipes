@@ -91,6 +91,32 @@ One observation that one can formulate here is that you can load incomplete
 encoding of a symbol when loading in the byte mode.
 
 ### Function `readline`
+Run:
+```python
+for n in range(7):
+    read_file(path=FILEPATH, mode="rt", n=n, rf="readline")
+for n in range(7):
+    read_file(path=FILEPATH, mode="rb", n=n, rf="readline")
+```
+To get:
+```commandline
+mode='rt', n=0, rf='readline'; output=''
+mode='rt', n=1, rf='readline'; output='1'
+mode='rt', n=2, rf='readline'; output='1ä'
+mode='rt', n=3, rf='readline'; output='1ä\n'
+mode='rt', n=4, rf='readline'; output='1ä\n'
+mode='rt', n=5, rf='readline'; output='1ä\n'
+mode='rb', n=0, rf='readline'; output=b''
+mode='rb', n=1, rf='readline'; output=b'1'
+mode='rb', n=2, rf='readline'; output=b'1\xc3'
+mode='rb', n=3, rf='readline'; output=b'1\xc3\xa4'
+mode='rb', n=4, rf='readline'; output=b'1\xc3\xa4\n'
+mode='rb', n=5, rf='readline'; output=b'1\xc3\xa4\n'
+```
 
+This function works analogously to the `read` except that it loads at most
+one line of text. Hence, assuming text mode, even if you order it to read
+more characters than there are in the line at hand, it will not go to the next 
+line in order to get more of them.
 
 ### Function `readlines`
