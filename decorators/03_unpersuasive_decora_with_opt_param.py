@@ -65,12 +65,5 @@ def my_function(*args, **kwargs):
 
 
 if __name__ == "__main__":
-
-    # res1 = decorator_first_version(repetitions=3)(my_function)(4, 2, a=2, b=32)
-    # res2 = decorator_second_version(repetitions=4)#(my_function(4, 2, a=2, b=32))()
-    # res3 = res2(func=my_function)(func_=my_function)(my_function(4, 2, a=2, b=32))
-    # print(res2)
+    decorator_first_version(repetitions=3)(my_function)(4, 2, a=2, b=32)
     decorator_second_version(repetitions=3)(my_function)(4, 2, a=2, b=32)
-
-    # EXEGESIS OF APPROACH (1)
-    # EXEGESIS OF APPROACH (2)
