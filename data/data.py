@@ -9,6 +9,7 @@ DataDict: TypeAlias = dict[str, pd.DataFrame]
 def load_data() -> DataDict:
     p: Path = Path(__file__).parent
     paths: list[Path] = list(p.glob(pattern="*.csv"))
+    paths = sorted(paths)
     datas: DataDict = {}
     for path in paths:
         name: str = path.name.split(".")[0][:-2]

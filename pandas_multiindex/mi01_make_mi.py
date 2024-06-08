@@ -9,7 +9,7 @@ if __name__ == "__main__":
     data = make_mi_data()
     # multiindex from product
     mi = pd.MultiIndex.from_product([
-        ["kgh", "hgc", "usdcny"],
+        ["hgc", "kgh", "usdcny"],
         ["open", "high", "low", "close"]
     ], names=["asset", "ohlc_attrib"])
     data_mi = data.copy(deep=True)
