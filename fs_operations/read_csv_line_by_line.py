@@ -10,11 +10,9 @@ def read_text_file_line_by_line(p: Path) -> list:
     with open(p, mode="rb") as f:
         for line in f:
             print(line)
-
     with open(p, mode="rt") as f:
         for line in f:
             print(line)
-
     return lines
 
 
