@@ -120,3 +120,24 @@ more characters than there are in the line at hand, it will not go to the next
 line in order to get more of them.
 
 ### Function `readlines`
+Run:
+```python
+for n in range(2, 6, 1):
+    read_file(path=FILEPATH, mode="rt", n=n, rf="readlines")
+for n in range(2, 6, 1):
+    read_file(path=FILEPATH, mode="rb", n=n, rf="readlines")
+```
+Get:
+```commandline
+mode='rt', n=2, rf='readlines'; output=['1ä\n']
+mode='rt', n=3, rf='readlines'; output=['1ä\n', '3ü\n']
+mode='rt', n=4, rf='readlines'; output=['1ä\n', '3ü\n']
+mode='rt', n=5, rf='readlines'; output=['1ä\n', '3ü\n']
+mode='rb', n=2, rf='readlines'; output=[b'1\xc3\xa4\n']
+mode='rb', n=3, rf='readlines'; output=[b'1\xc3\xa4\n']
+mode='rb', n=4, rf='readlines'; output=[b'1\xc3\xa4\n', b'3\xc3\xbc\n']
+mode='rb', n=5, rf='readlines'; output=[b'1\xc3\xa4\n', b'3\xc3\xbc\n']
+```
+
+Function `readlines` works by loading fully every started line. Thus, regardless
+of open mode (byte or text) once you reach out to the next line it will be loaded fully.
