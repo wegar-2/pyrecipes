@@ -21,7 +21,6 @@ if __name__ == "__main__":
     kgh_data = data.loc[:, ("kgh", slice(None))]
     open_data = data.loc[:, (slice(None), "open")]
     custom_data = pd.concat([kgh_data, open_data], axis=1)
-    custom_data.columns.duplicated()
     custom_data = custom_data.loc[:, ~custom_data.columns.duplicated()]
 
     print("end")
