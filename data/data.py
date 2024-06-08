@@ -15,7 +15,7 @@ def load_data() -> DataDict:
         data: pd.DataFrame = pd.read_csv(path, parse_dates=["Date"])
         data = data.set_index("Date")
         data.columns = [
-            f"{name}_{c}".lower()
+            f"{name.replace('_', '')}_{c}".lower()
             for c in data.columns
         ]
         data = data.loc[:, [c for c in data.columns

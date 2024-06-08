@@ -13,10 +13,11 @@ def joiner(l, r) -> pd.DataFrame:
 def make_mi_data() -> pd.DataFrame:
     data: pd.DataFrame
     d: DataDict = load_data()
-    return reduce(
+    data = reduce(
         joiner,
         [data for data in d.values()]
     ).fillna(method="ffill").fillna(method="bfill")
+    return data
 
 
 if __name__ == "__main__":
