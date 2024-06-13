@@ -18,3 +18,11 @@ class Point1d:
         fget=get_x,  # noqa
         fset=set_x,  # noqa
     )
+
+
+if __name__ == "__main__":
+
+    p = Point1d(1)
+    print(f"{p.x=}")
+    p.x = 32
+    print(f"{p.x=}")
