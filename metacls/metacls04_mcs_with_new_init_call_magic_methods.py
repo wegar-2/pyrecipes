@@ -1,5 +1,5 @@
 # Reference:
-# Python Docs: https://docs.python.org/3/reference/datamodel.html
+# (1) Python Docs: https://docs.python.org/3/reference/datamodel.html
 # Quote:
 #
 # """"3.2.8.8. Classes
@@ -18,8 +18,11 @@
 # Therefore, if you want your class to instantiate using the standard call,
 # you need to provide the right behavior inside the metaclass' __call__
 #
-# Also cf.:
-# https://discuss.python.org/t/init-versus-call/14065/2
+# Also cf. references:
+# (2) https://discuss.python.org/t/init-versus-call/14065/2
+# (3) https://www.datasciencecentral.com/understanding-the-complexity-of-metaclasses-and-their-practical-2/
+# (4) https://eli.thegreenplace.net/2011/08/14/python-metaclasses-by-example
+# (5) https://www.geeksforgeeks.org/how-to-use-__call__-method-instead-of-__new__-of-a-metaclass-in-python/
 
 class MyMetaClass(type):
 
