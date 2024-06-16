@@ -31,9 +31,11 @@ class MyMetaClass(type):
         class_ = super().__new__(cls, *args, **kwargs)
         return class_
 
-    def __init__(self, *args, **kwargs):
+    def __init__(cls, *args, **kwargs):
         print("metaclass __init__")
-        super(MyMetaClass, self).__init__(*args, **kwargs)
+        super(MyMetaClass, cls).__init__(*args, **kwargs)
+        # alternative working approach:
+        # super().__init__(*args, **kwargs)
 
     def __call__(cls, *args, **kwargs):
         print("metaclass __call__")
