@@ -21,3 +21,7 @@ if __name__ == "__main__":
     print(f"before init: {a.__dict__=}")
     A.__init__(a, 23, 33)
     print(f"after init: {a.__dict__=}")
+
+    # alternatively: call __init__ on instance and not on class;
+    # Note, that it is not necessary to pass self in this case
+    a.__init__(x=23, y=33)
