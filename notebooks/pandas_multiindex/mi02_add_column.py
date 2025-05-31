@@ -1,4 +1,4 @@
-from scripts.pandas_multiindex.mi00_make_data import make_mi_data
+from notebooks.pandas_multiindex.mi00_make_data import make_mi_data
 
 
 if __name__ == "__main__":
