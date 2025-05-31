@@ -31,4 +31,5 @@ Python scripts with snippets pertaining to various topics
   
 
 ### notebooks 
- 
+* [Tutorial on working with time zones in `datetime`, `dateutil` and `pandas`](./notebooks/tutorial-timezones-datetime-dateutil-pandas.ipynb)
+* 
