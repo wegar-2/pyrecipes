@@ -1,4 +1,4 @@
-from reading_files.reader import read_file, FILEPATH
+from scripts.reading_files.reader import read_file, FILEPATH
 
 
 if __name__ == "__main__":
