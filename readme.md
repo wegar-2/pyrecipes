@@ -33,3 +33,4 @@ Python scripts with snippets pertaining to various topics
 ### notebooks 
 1. [Tutorial on working with time zones in `datetime`, `dateutil` and `pandas`](./notebooks/tutorial-timezones-datetime-dateutil-pandas.ipynb)
 2. [Overview of useful string columns methods in `pandas`](./notebooks/dataframe_string_col_operations.ipynb)
+3. [f-string formatting of numbers, datetimes and strings](./notebooks/fstring_tutorial.ipynb)
