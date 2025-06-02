@@ -1,3 +1,5 @@
+# Reference: https://mypy.readthedocs.io/en/stable/more_types.html
+
 from typing import overload, Optional
 
 

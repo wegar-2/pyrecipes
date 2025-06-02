@@ -30,7 +30,9 @@ Python scripts with snippets pertaining to various topics
 16. [`operators_overloading`](./scripts/operators_overloading) - overloading of operators in Python
 17. [`reading_files`](./scripts/reading_files) - explained difference between `read`, `readline` and `readlines` methods called on open file
 18. [`singleton_with_mcs`](./scripts/singleton_with_mcs) - implementing singleton patter in Python using metaclasses
-  
+19. [`builtins_notes`](./scripts/builtins_notes) - notes on select builtins
+    * [counting `Iterable` elements](./scripts/builtins_notes/counting_iterable_elements.py)
+
 
 ### notebooks 
 1. [Tutorial on working with time zones in `datetime`, `dateutil` and `pandas`](./notebooks/tutorial-timezones-datetime-dateutil-pandas.ipynb)
