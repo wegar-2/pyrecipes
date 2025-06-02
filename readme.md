@@ -32,7 +32,7 @@ Python scripts with snippets pertaining to various topics
 18. [`singleton_with_mcs`](./scripts/singleton_with_mcs) - implementing singleton patter in Python using metaclasses
 19. [`builtins_notes`](./scripts/builtins_notes) - notes on select builtins
     * [counting `Iterable` elements](./scripts/builtins_notes/counting_iterable_elements.py)
-
+    * [using `itertools.groupby` example](./scripts/builtins_notes/using_itertools_groupby.py)
 
 ### notebooks 
 1. [Tutorial on working with time zones in `datetime`, `dateutil` and `pandas`](./notebooks/tutorial-timezones-datetime-dateutil-pandas.ipynb)
