@@ -3,16 +3,9 @@
 import threading
 import logging
 import time
+import scripts
 
 logger = logging.getLogger(__name__)
-
-
-def my_configure_logging():
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s ::: %(name)s ::: %(levelname)s ::: %(message)s'
-    )
-
 
 
 def called_in_thread(name):
@@ -23,12 +16,11 @@ def called_in_thread(name):
 
 if __name__ == "__main__":
 
-    my_configure_logging()
-
     logger.info("before creating thread...")
     threads = threading.Thread(
         target=called_in_thread,
-        args=("qwerty", )
+        args=("qwerty", ),
+        name="my_thread"
     )
 
     logger.info("before starting thread...")

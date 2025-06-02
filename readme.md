@@ -33,7 +33,9 @@ Python scripts with snippets pertaining to various topics
 19. [`builtins_notes`](./scripts/builtins_notes) - notes on select builtins
     * [counting `Iterable` elements](./scripts/builtins_notes/counting_iterable_elements.py)
     * [using `itertools.groupby` example](./scripts/builtins_notes/using_itertools_groupby.py)
-20. [`threading`](./scripts/threading_notes) - notes on Pythons `threading` package 
+20. [`threading`](./scripts/threading_notes) - notes on Pythons `threading` package
+    * [most basic case](./scripts/threading_notes/intro_to_threading.py)
+    * [manually managing multiple threads](./scripts/threading_notes/multiple_threads_manually.py) 
 
 ### notebooks 
 1. [Tutorial on working with time zones in `datetime`, `dateutil` and `pandas`](./notebooks/tutorial-timezones-datetime-dateutil-pandas.ipynb)
