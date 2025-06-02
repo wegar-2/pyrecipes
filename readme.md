@@ -24,6 +24,8 @@ Python scripts with snippets pertaining to various topics
 12. [`itertools_notes`](./scripts/itertools_notes) - notes on using select Python `itertools` package functions
 13. [`metacls`](./scripts/metacls) - notes on metaclasses in Python
 14. [`mypy`](./scripts/mypy) - notes on Pytohn's static type checked [mypy](https://mypy.readthedocs.io/en/stable/)
+    * [`overload` basics](./scripts/mypy/overload_basics.py)
+    * [`overload` for separating implementation of different values of a `Literat` type](./scripts/mypy/overload_literal_type.py)
 15. [`oop`](./scripts/oop) - OOP in Python: notes
 16. [`operators_overloading`](./scripts/operators_overloading) - overloading of operators in Python
 17. [`reading_files`](./scripts/reading_files) - explained difference between `read`, `readline` and `readlines` methods called on open file
