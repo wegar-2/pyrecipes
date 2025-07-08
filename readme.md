@@ -37,6 +37,7 @@ Python scripts with snippets pertaining to various topics
     * [most basic usecase](./scripts/threading_notes/intro_to_threading.py)
     * [manually managing multiple threads](./scripts/threading_notes/multiple_threads_manually.py)
 21. [`regexps`](scripts/regexps) - notes on regular expressions in Python with `re`
+22. [`rmetaprog`](scripts/metaprog) - notes on metaprogramming in Python
 
 ### notebooks 
 1. [Tutorial on working with time zones in `datetime`, `dateutil` and `pandas`](./notebooks/tutorial-timezones-datetime-dateutil-pandas.ipynb)
