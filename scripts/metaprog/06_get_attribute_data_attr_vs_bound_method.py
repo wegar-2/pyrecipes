@@ -31,7 +31,7 @@ if __name__ == "__main__":
     print(f"{getattr(obj, 'qwerty')=}")
     print("\n")
 
-    # here - __dict__ member is accessed
+    # here - __dict__ member is accessedR
     print(f"{obj.__dict__=}")
     print("\n")
 
