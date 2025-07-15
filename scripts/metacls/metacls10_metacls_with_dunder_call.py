@@ -24,7 +24,7 @@ class MyMetaClass(type):
         return new_class
 
     def __call__(
-            mcls,
+            mcls, # noqa
             *args,
             **kwargs
     ):
