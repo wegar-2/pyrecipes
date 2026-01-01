@@ -1,4 +1,5 @@
-from scripts.algorithms.sorting.common import generate_array_for_sorting
+from scripts.algorithms.sorting.common import sort_algo_test
+
 
 def _merge(left: list[int], right: list[int], nums: list[int]):
     i, j = 0, 0
@@ -24,17 +25,4 @@ def merge_sort(nums: list[int]) -> None:
 
 
 if __name__ == "__main__":
-
-    for k in range(1000):
-        nums = generate_array_for_sorting()
-        from copy import deepcopy
-        backup = deepcopy(nums)
-        merge_sort(nums=nums)
-        builtin_sort = sorted(backup)
-        # [nums[i] != builtin_sort[i] for i in range(len(nums))].index(True)
-        # nums[238:243]
-        # builtin_sort[238:243]
-        # len(nums)
-        # len(builtin_sort)
-        if nums != builtin_sort:
-            raise Exception("Error")
+    sort_algo_test(func=merge_sort, inplace=True)
