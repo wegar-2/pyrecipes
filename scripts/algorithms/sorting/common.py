@@ -6,7 +6,7 @@ import numpy as np
 
 def generate_array_for_sorting(seed: int | None = None) -> list[int]:
     np.random.seed(seed=seed)
-    len_ = np.random.randint(size=1, low=1_000, high=100_000)[0]
+    len_ = 1_000
     return list(np.random.randint(size=len_, low=0, high=100_000))
 
 
@@ -15,8 +15,7 @@ def sort_algo_test(
         inplace: bool = False,
 ):
     for k in range(1, 101, 1):
-        if k % 10 == 0:
-            logger.info(f"Test {k}/100...")
+        logger.info(f"Test {k}/100...")
         nums = generate_array_for_sorting()
         builtin_sort = sorted(nums)
         if inplace:
