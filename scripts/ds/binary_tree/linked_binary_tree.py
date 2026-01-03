@@ -110,7 +110,20 @@ class LinkedBinaryTree(BinaryTreeABC):
     def _attach(
             self,
             p: Position,
-            tl: LinkedBinaryTree,
-            tr: LinkedBinaryTree
+            tl: Optional[LinkedBinaryTree],
+            tr: Optional[LinkedBinaryTree]
     ):
-        pass
+        node = self._validate(p=p)
+        if not self.is_leaf(p=p):
+            raise Exception("Cannot attach to non-leaf! ")
+        self._size = self._size + len(tl) + len(tr)
+        if not tl.is_empty():
+            node.left = tl.root
+            tl.root.parent = node
+            tl.root = None
+            tl._size = 0
+        if not tr.is_empty():
+            node.right = tr.root
+            tr.root.parent = node
+            tr.root = None
+            tr._size = 0
