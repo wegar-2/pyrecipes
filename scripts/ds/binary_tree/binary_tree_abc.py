@@ -3,7 +3,7 @@ from scripts.ds.binary_tree.tree_abc import TreeABC
 from scripts.ds.binary_tree.position_abc import PositionABC
 
 
-class BinaryTreeABC(ABC, TreeABC):
+class BinaryTreeABC(TreeABC):
 
     def __init__(self, root):
         self._root = root
