@@ -5,9 +5,6 @@ from scripts.ds.binary_tree.position_abc import PositionABC
 
 class BinaryTreeABC(TreeABC):
 
-    def __init__(self, root):
-        self._root = root
-
     @abstractmethod
     def left(self, p: PositionABC):
         pass

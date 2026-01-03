@@ -19,7 +19,7 @@ class TreeABC(ABC):
         pass
 
     @abstractmethod
-    def children(self):
+    def children(self, p: PositionABC):
         pass
 
     @abstractmethod
@@ -29,10 +29,8 @@ class TreeABC(ABC):
     def is_root(self, p: PositionABC):
         return self.root == p
 
-    @abstractmethod
     def is_empty(self):
         return len(self) == 0
 
-    @abstractmethod
     def is_leaf(self, p: PositionABC):
         return self.num_children(p=p) == 0

@@ -22,7 +22,18 @@ class Node:
     def element(self) -> int:
         return self._element
 
+    @element.setter
+    def element(self, elem: int):
+        self._element = elem
+
     @property
-    def parent(self) -> Node:
+    def parent(self) -> Node | None:
         return self._parent
 
+    @property
+    def left(self) -> Node | None:
+        return self._left
+
+    @property
+    def right(self) -> Node | None:
+        return self._right
